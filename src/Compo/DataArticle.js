@@ -1,16 +1,19 @@
 import React, { createContext, useState } from 'react';
-import Demo from './Demo';
+// import Demo from './Demo';
+import PropTypes from 'prop-types'
 
+export const ContextData = createContext();
 
-export const Store = createContext();
-
-function DataArticle(){
+export const DataArticle = (props) => {
+    DataArticle.propTypes = {
+      children: PropTypes.node.isRequired,
+    };
     const [data, setData] = useState([
         {
             id:1,
             heading:'5G Technology',
-            image:"blogweb/Article/Tech img/a5ba713859dbcdfc73b104275d2fecd7.jpg",
-            description:'./Article/Technology/G Technology The Next Generation o.txt',
+            image:"",
+            description:'',
             short_desc:'How 5G Technology is changing the world',
             cate:'Technology'
         },
@@ -33,10 +36,9 @@ function DataArticle(){
        
     ])
     return (
-        <Store.Provider value= {[data, setData]}>
-            <Demo/>
-            
-        </Store.Provider>
+        <ContextData.Provider value= {[data, setData]}>
+         {props.children}
+        </ContextData.Provider>
     )
 }
 
