@@ -448,7 +448,7 @@ export const DataArticle = (props) => {
         },
         {
             id:10,
-            heading:'BTS: Jungkook Indian fans promote Seven in Kolkata, stick posters besides politicians',
+            heading:'BTS: Jungkook Indian fans promote Seven in Kolkata',
             image:'https://i.pinimg.com/736x/3c/d4/13/3cd413d98d1fcce54b70ba58122eefd4.jpg',
             date: '/23 July 2023',
             time:`10 min read`,
@@ -1163,7 +1163,7 @@ export const DataArticle = (props) => {
             Elemental, a parable about immigration and getting along, initially contributed to Pixar’s ongoing woes when opening to a paltry $29.6 million over the June 16-18 frame, the worst three-day weekend start in the storied company’s history behind 1995’s Toy Story, which earned $29.1 million over the three-day Thanksgiving weekend. (Toy Story‘s haul was a small fortune at the time.)
 
             But skies began to turn sunny for Elemental when it held in week after week, enjoying one of the top multiples of any Pixar title in history at the North American box office. And it quickly surpassed DC’s 2023 summer tentpole The Flash, which opened over the same June weekend to far bigger numbers but to date has earned only $107 million domestically and $268.3 million globally.`,
-            short_desc:'The Pixar movie started off alarmingly slow but has since made a comeback after enjoying one of the best multiples ever for the storied animation studio.',
+            short_desc:'The Pixar movie started off alarmingly slow but has since made a comeback after enjoying one of the best multiples ever.',
             cate:'Hollywood'
         },
         {

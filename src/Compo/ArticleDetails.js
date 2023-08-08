@@ -48,8 +48,10 @@ function ArticleDetails() {
       <img className='logo5' src={img6} alt='not'/>
       <img className='logo6' src={img7} alt='not'/>
       <span className='name'>Shaswat Mishra</span>
-      <span className='Adate'>{article.date}</span>
-      <span className='Atime'>{article.time}</span>
+      <div className='timeonly'>
+      <span>{article.time}</span>
+      <span>{article.date}</span>
+      </div>
       <img className='Apic' src={article.image} alt="not found" />
       <p className='Pdec'>{article.description}</p>
       <img className='logo7' src={img6} alt='not'/>

@@ -5,6 +5,7 @@ import './Compo.css';
 
 function Technology() {
   const [DData] = useContext(ContextData);
+
   return (
     <>
     <div className='normalpage'>
@@ -19,7 +20,6 @@ function Technology() {
         <img className='picstyle' src={data.image} alt={"not found"}/>
         <p className='shortnote'>{data.short_desc}</p>
         <span className='cate cd'>{data.cate}</span><span className='cate cd'>{data.date}</span>
-        <hr className='hrline_move'/>
            </div>
            </Link>
         </>
@@ -34,7 +34,6 @@ function Technology() {
            <img className='picstyle2' src={data.image} alt={"not found"}/>
            <p className='cardhead2' key={data.id}>{data.heading} </p>
            <span className='date1 cd'>{data.cate}</span><span className='date1'>{data.date}</span>
-           <hr className='hrlinetop'/>
            </div>
            </Link>
         </>
@@ -46,8 +45,7 @@ function Technology() {
            <p className='cardhead3' key={data.id}>{data.heading} 
         </p>
         <img className='picstyle1' src={data.image} alt={"not found"}/>
-        <span className='date cd'>{data.cate}</span><span className='date cd'>{data.date}</span>
-        <hr className='hrlinetop1'/>
+        <div className='date'><span>{data.cate}</span><span>{data.date}</span></div>
            </div>
            </Link>
         </>
