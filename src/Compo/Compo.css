@@ -206,6 +206,7 @@ Article Details css from here
   margin-bottom: 20px;
   padding-top: 20px;
 }
+
 .endpart{
   background-color: #FAFAFA;
   position: relative;
@@ -639,13 +640,11 @@ Home css from here
   visibility: hidden;
 }
 @media screen and (min-width:280px) and (max-width:500px){
-  div #root{
-    width: 330px;
-    overflow-x: hidden;
-  }
   body{
     overflow-x: hidden;
-    margin: 0px;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
   }
   .heading{
     display: none;
@@ -682,9 +681,9 @@ Home css from here
     left: 320px;
     top: 5px;
   }
-  header{
-    width: 340px;
-  }
+  header {
+    width: 90%;
+}
   .navbar {
     text-align: center;
     line-height: 150%;
@@ -696,10 +695,8 @@ Home css from here
     color: orange;
     visibility: visible;
     width: 350px;
-    /* position: fixed; 
-    top: 0px; 
-    width: 100%; 
-    z-index: 100; */
+    position: fixed; 
+    z-index: 100;
   }
   
   .navbar.responsive_nav {
@@ -816,13 +813,13 @@ Home css from here
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 340px;
+  width: 100%;
 }
 .Apic {
-  width: 350px;
+  width: 90%;
   height: 380px;
   position: relative;
-  left: 5px;
+  left: 10px;
   top: 60px;
 }
 .name {
@@ -832,10 +829,10 @@ Home css from here
   top: 35px;
 }
 .Pdec {
-  width: 350px;
+  width: 90%;
   position: relative;
   top: 40px;
-  left: 0px;
+  left: 10px;
   margin-bottom: 20px;
   padding-top: 20px;
 }
@@ -849,7 +846,7 @@ Home css from here
   left: 90px;
   top: 30px;
   bottom: 35px;
-  width: 190px;
+  width: 200px;
 }
 .logo_1 {
   position: relative;
@@ -909,7 +906,7 @@ Home css from here
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 350px;
+  width: 90%;
 }
 .ArticleHome{
   width: 350px;

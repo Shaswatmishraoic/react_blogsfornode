@@ -38,7 +38,6 @@ function ArticleDetails() {
   return (
     <>
     <div><Newnav/></div>
-    <div>
       <h1 className='Aheading'>{article.heading}</h1>
       <img className='logo1' src={img1} alt="Mask"/>
       <img className='sm logo_1' src={img2} alt='not'/>
@@ -61,7 +60,7 @@ function ArticleDetails() {
       <span className='namelast'>Shaswat Mishra</span>
       <div className='timedayend'><span>{article.time}</span><span>{article.date}</span></div>
       <hr className='endline1'/>
-    </div>
+    
       {/* lower level part */}
     <div className='endpart'>
     <span className='more'>More From The Siren</span>
