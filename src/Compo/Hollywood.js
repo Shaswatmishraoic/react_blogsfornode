@@ -22,6 +22,7 @@ function Hollywood() {
         <img className='picstyle' src={data.image} alt={"not found"}/>
         <p className='shortnote'>{data.short_desc}</p>
         <span className='cate cd'>{data.cate}</span><span className='cate cd'>{data.date}</span>
+        <hr className='hrcolor'/>
            </div>
            </Link>
         </>
@@ -36,6 +37,7 @@ function Hollywood() {
            <img className='picstyle2' src={data.image} alt={"not found"}/>
            <p className='cardhead2' key={data.id}>{data.heading} </p>
            <span className='date1 cd'>{data.cate}</span><span className='date1'>{data.date}</span>
+           <hr className='hrcolor2'/>
            </div>
            </Link>
         </>
@@ -49,6 +51,7 @@ function Hollywood() {
         <img className='picstyle1' src={data.image} alt={"not found"}/>
         <div className='date'><span>{data.cate}</span><span>{data.date}</span></div>
            </div>
+           <hr className='hrcolor2'/>
            </Link>
         </>
       ))}

@@ -1,11 +1,12 @@
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useRef, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 import './Compo.css';
 
 function LinkCompo({ isVisible }) {
   const navRef = useRef();
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleNavbar = () => {
     setIsNavOpen(!isNavOpen);
@@ -13,6 +14,9 @@ function LinkCompo({ isVisible }) {
 
   const hideNavbar = () => {
     setIsNavOpen(false);
+  };
+  const handleGoHome = () => {
+    navigate('/');
   };
 
   return (
@@ -22,6 +26,12 @@ function LinkCompo({ isVisible }) {
           <button className='nav-btn' onClick={toggleNavbar}>
             {isNavOpen ? <FaTimes /> : <FaBars />}
           </button>
+          <button className='gohome' onClick={handleGoHome}>
+          <div>
+            <span className='the1'>The</span>
+            <span className='siren1'>Siren</span>
+          </div>
+        </button>
           <nav
             ref={navRef}
             className={`navbar ${isNavOpen ?'' : 'responsive_nav' }`}

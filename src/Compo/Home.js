@@ -198,12 +198,12 @@ function Home() {
         <>
         <Link key={data.id} to={`/article/${data.id}`}>
            <div className='Container_123'>
-           <p className='cardhead' key={data.id}>{data.heading} 
-        </p>
-        <img className='picstyle' src={data.image} alt={"not found"}/>
-        <p className='shortnote'>{data.short_desc}</p>
+           <p className='cardhead_11' key={data.id}>{data.heading}</p>
+        <img className='picstyle101' src={data.image} alt={"not found"}/>
+        <p className='shortnote1o1'>{data.short_desc}</p>
         <span className='cate cd'>{data.cate}</span><span className='cate cd'>{data.date}</span>
            </div>
+           <hr className='hrcolor2'/>
            </Link>
         </>
       ))}
@@ -213,12 +213,13 @@ function Home() {
         <>
         <Link key={data.id} to={`/article/${data.id}`}>
            <div className='Container_123'>
-           <p className='cardhead' key={data.id}>{data.heading} 
+           <p className='cardhead_11' key={data.id}>{data.heading} 
         </p>
-        <img className='picstyle' src={data.image} alt={"not found"}/>
-        <p className='shortnote'>{data.short_desc}</p>
+        <img className='picstyle101' src={data.image} alt={"not found"}/>
+        <p className='shortnote1o1'>{data.short_desc}</p>
         <span className='cate cd'>{data.cate}</span><span className='cate cd'>{data.date}</span>
            </div>
+           <hr className='hrcolor2'/>
            </Link>
         </>
       ))}
@@ -228,12 +229,13 @@ function Home() {
         <>
         <Link key={data.id} to={`/article/${data.id}`}>
            <div className='Container_123'>
-           <p className='cardhead' key={data.id}>{data.heading} 
+           <p className='cardhead_11' key={data.id}>{data.heading} 
         </p>
-        <img className='picstyle' src={data.image} alt={"not found"}/>
-        <p className='shortnote'>{data.short_desc}</p>
+        <img className='picstyle101' src={data.image} alt={"not found"}/>
+        <p className='shortnote1o1'>{data.short_desc}</p>
         <span className='cate cd'>{data.cate}</span><span className='cate cd'>{data.date}</span>
            </div>
+           <hr className='hrcolor2'/>
            </Link>
         </>
       ))}
@@ -243,15 +245,16 @@ function Home() {
         <img className='adv1' src={data.image} alt={"not found"}/>
       ))}
     
-      <div className='toptext2_123'><span className='tophead'>Top </span><span> Post</span></div>
+      <div className='lastonetext'><span className='tophead'>Top </span><span> Post</span></div>
       <div className='toplast_one'>
       {DData.filter((item) => item.cate === 'Home' && item.id === 3).map((data) => (
         <>
         <Link key={data.id} to={`/article/${data.id}`}>
-           <div className='Container1 na'>
+           <div className='Container124 na'>
            <img className='picstyle2_two' src={data.image} alt={"not found"}/>
            <p className='cardhead2' key={data.id}>{data.heading} </p>
            <span className='date1 cd'>{data.cate}</span><span className='date1'>{data.date}</span>
+           <hr className='hrcolor2'/>
            </div>
            </Link>
         </>
@@ -266,6 +269,7 @@ function Home() {
         <img className='picstyle1_1' src={data.image} alt={"not found"} />
         <div className='date'><span>{data.cate}</span><span>{data.date}</span></div>
         </div>
+        <hr className='hrcolor2'/>
       </Link>
       ))}
       </div>
@@ -277,6 +281,7 @@ function Home() {
         <img className='picstyle1_1' src={data.image} alt={"not found"} />
         <div className='date'><span>{data.cate}</span><span>{data.date}</span></div>
         </div>
+        <hr className='hrcolor2'/>
       </Link>
       ))}
       </div>
@@ -298,8 +303,8 @@ function Home() {
         ))}
       </div>
       {/* end part */ }
-      <div className='toptext2_12 ed2'><span className='tophead'>Latest</span><span> Articles</span></div>
-      <div className='topmover'>
+      <div className='toptext2_123'><span className='tophead'>Latest</span><span> Stories</span></div>
+      <div className='topmover12'>
       <div className='movetop'>
       {DData.filter((item) => item.cate === 'Home' && item.id === 2 ).map((data) => (
         <>
