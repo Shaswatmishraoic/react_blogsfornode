@@ -856,10 +856,10 @@ Home css from here
   bottom: 174px;
 }
 .date {
-  left: 140px;
   bottom: 73px;
+  left: 47%;
   position: relative;
-  width: 177px;
+  width: 190px;
 }
 .section_one {
   width: 356px;
@@ -1003,6 +1003,14 @@ Home css from here
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+.cardhead3 {
+  font-weight: bold;
+  position: relative;
+  left: 45%;
+  top: 20px;
+  padding-left: 5px;
+  width: 60%;
 }
 
 /*For Home*/
@@ -1363,10 +1371,18 @@ Home css from here
   bottom: 174px;
 }
 .date {
-  left: 140px;
+  left: 47%;
   bottom: 73px;
   position: relative;
   width: 177px;
+}
+.cardhead3 {
+  font-weight: bold;
+  position: relative;
+  left: 47%;
+  top: 20px;
+  padding-left: 5px;
+  width: 60%;
 }
 .section_one {
   width: 356px;
