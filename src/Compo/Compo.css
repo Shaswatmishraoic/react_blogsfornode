@@ -86,7 +86,7 @@ a:active {
 .cardhead3 {
   font-weight: bold;
   position: relative;
-  left: 40%;
+  left: 45%;
   top: 20px;
   padding-left: 5px;
   width: 60%;
@@ -301,7 +301,6 @@ Article Details css from here
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* background-color: red; */
 }
 
 .gohome {
@@ -309,7 +308,7 @@ Article Details css from here
   text-decoration: none;
   font-weight: bold;
   background: transparent;
-  border: 1px solid #f0f0f0;
+  border: 1px solid white;
   position: relative;
   /* left: 10%; */
   visibility: visible;
