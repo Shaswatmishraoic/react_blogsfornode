@@ -27,7 +27,7 @@ function LinkCompo({ isVisible }) {
             {isNavOpen ? <FaTimes /> : <FaBars />}
           </button>
           <button className='gohome' onClick={handleGoHome}>
-          <div>
+          <div className='noshow'>
             <span className='the1'>The</span>
             <span className='siren1'>Siren</span>
           </div>

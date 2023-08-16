@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { ContextData } from './DataArticle';
 import { Link } from 'react-router-dom';
-// import Newnav from './Newnav';
+import Newnav from './Newnav';
 import img1 from '../pic/Mask Group 21.png';
 import img2 from '../pic/icons8-facebook-50.png';
 import img3 from '../pic/icons8-instagram-50.png';
@@ -37,7 +37,7 @@ function ArticleDetails() {
 
   return (
     <>
-    {/* <div><Newnav/></div> */}
+    <Newnav/>
       <h1 className='Aheading'>{article.heading}</h1>
       <img className='logo1' src={img1} alt="Mask"/>
       <img className='sm logo_1' src={img2} alt='not'/>

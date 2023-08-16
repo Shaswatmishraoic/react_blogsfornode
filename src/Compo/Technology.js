@@ -1,13 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext,useState} from 'react';
 import { ContextData } from './DataArticle';
 import { Link } from 'react-router-dom';
 import './Compo.css';
+import Headofweb from './Headofweb';
+import LinkCompo from './LinkCompo';
 
 function Technology() {
   const [DData] = useContext(ContextData);
+  const [isLinkCompoVisible] = useState(true);
 
   return (
     <>
+    <Headofweb/>
+    <LinkCompo isVisible={isLinkCompoVisible}/>
     <div className='normalpage'>
     <div className='section_one'>
     <div className='toptext'><span className='tophead'>Tech</span><span>nology</span></div>

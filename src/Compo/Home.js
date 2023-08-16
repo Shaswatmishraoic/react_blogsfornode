@@ -1,24 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext,useState } from 'react';
 import { ContextData } from './DataArticle';
 import { Link } from 'react-router-dom';
-// import Slider from 'react-slick';
-// import 'slick-carousel/slick/slick.css';
-// import 'slick-carousel/slick/slick-theme.css';
 import './Compo.css';
+import Headofweb from './Headofweb';
+import LinkCompo from './LinkCompo';
 
 function Home() {
   const [DData] = useContext(ContextData);
-
-  // const sliderSettings = {
-  //   dots: true,
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 3000,
-  // };
+  const [isLinkCompoVisible] = useState(true);
 
   return (
+    <>
+      <Headofweb/>
+      <LinkCompo isVisible={isLinkCompoVisible}/>
     <div className='ArticleHome'>
     <div className='firstpost' id='slider'>
     <figure>
@@ -69,79 +63,6 @@ function Home() {
       </div>
     </figure>
     </div>
-      {/* <> */}
-      {/* Render the Slider component only for screens within the specified range */}
-      {/* {window.innerWidth >= 280 && window.innerWidth <= 500 ? (
-        <div className='slider-container'>
-          <Slider {...sliderSettings}>
-            {DData.filter((item) => item.cate === 'Home').map((data) => (
-              <div key={data.id} className='slider-item'>
-                <Link to={`/article/${data.id}`}>
-                  <div className='slider-image' style={{ backgroundImage: `url(${data.image})` }}>
-                    <div className='slider-content'>
-                      <p className='cardhead'>{data.heading}</p>
-                      <div className='firsthead'>
-                        <span>{data.cate}</span>
-                        <span>{data.date}</span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </Slider>
-        </div>
-      ) : (
-        // Render individual items for normal web view
-        <>
-          <div className='onecompo'>
-            {DData.filter((item) => item.cate === 'Home' && item.id === 1).map((data) => (
-              <div key={data.id} className='imgContainer'>
-                <Link to={`/article/${data.id}`}>
-                  <div className='Home_p1' style={{ backgroundImage: `url(${data.image})` }}>
-                    <p className='cardhead_one'>{data.heading}</p>
-                    <div className='firsthead_one'>
-                      <span>{data.cate}</span>
-                      <span>{data.date}</span>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-          <div className='twocompo'>
-            {DData.filter((item) => item.cate === 'Home' && item.id === 4).map((data) => (
-              <div key={data.id} className='imgContainer1'>
-                <Link to={`/article/${data.id}`}>
-                  <div className='Home_p2' style={{ backgroundImage: `url(${data.image})` }}>
-                    <p className='cardhead_two'>{data.heading}</p>
-                    <div className='firsthead_two'>
-                      <span>{data.cate}</span>
-                      <span>{data.date}</span>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-          <div className='threecompo'>
-            {DData.filter((item) => item.cate === 'Home' && item.id === 7).map((data) => (
-              <div key={data.id} className='imgContainer1'>
-                <Link to={`/article/${data.id}`}>
-                  <div className='Home_p2' style={{ backgroundImage: `url(${data.image})` }}>
-                    <p className='cardhead_two'>{data.heading}</p>
-                    <div className='firsthead_two'>
-                      <span>{data.cate}</span>
-                      <span>{data.date}</span>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-          </>
-      )}
-      </> */}
 
       {/* top most part */ }
       
@@ -346,6 +267,7 @@ function Home() {
       </div>
       </div>
     </div>
+    </>
   );
 }
 

@@ -20,7 +20,6 @@ function Newnav() {
         </NavLink>
         <button className='backbutton' onClick={handleGoBack}>Go Back</button>
       </nav>
-      
     </div>
   );
 }
