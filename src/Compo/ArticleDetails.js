@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { ContextData } from './DataArticle';
+// import { ContextData } from './DataArticle';
 import { Link } from 'react-router-dom';
 import Newnav from './Newnav';
 import img1 from '../pic/Mask Group 21.png';
@@ -10,10 +10,17 @@ import img4 from '../pic/icons8-twitter-squared-50.png';
 import img5 from '../pic/icons8-youtube-64.png';
 import img6 from '../pic/rythm.svg';
 import img7 from '../pic/share.svg';
+import axios from 'axios';
 
 function ArticleDetails() {
   const { id } = useParams();
-  const [data] = useContext(ContextData);
+  // const [data] = useContext(ContextData);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios("http://localhost:8000/")
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
+  }, []);
 
   const article = data.find((item) => item.id === parseInt(id));
 

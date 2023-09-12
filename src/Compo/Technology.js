@@ -1,12 +1,19 @@
-import React, { useContext,useState} from 'react';
-import { ContextData } from './DataArticle';
+import React, { useEffect,useState} from 'react';
+// import { ContextData } from './DataArticle';
 import { Link } from 'react-router-dom';
 import './Compo.css';
 import Headofweb from './Headofweb';
 import LinkCompo from './LinkCompo';
+import axios from 'axios'
 
 function Technology() {
-  const [DData] = useContext(ContextData);
+  // const [DData] = useContext(ContextData);
+  const [DData, setData] = useState([]);
+  useEffect(() => {
+    axios("http://localhost:8000/technology")
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
+  }, []);
   const [isLinkCompoVisible] = useState(true);
 
   return (

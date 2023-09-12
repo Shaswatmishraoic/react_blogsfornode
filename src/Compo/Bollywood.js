@@ -1,13 +1,19 @@
-import React, { useContext,useState } from 'react';
-import { ContextData } from './DataArticle';
+import React, { useState,useEffect } from 'react';
+// import { ContextData } from './DataArticle';
 import { Link } from 'react-router-dom';
 import './Compo.css';
 import Headofweb from './Headofweb';
 import LinkCompo from './LinkCompo';
-
+import axios from 'axios'
 
 function Bollywood() {
-  const [DData] = useContext(ContextData);
+  // const [DData] = useContext(ContextData);
+  const [DData, setData] = useState([]);
+  useEffect(() => {
+    axios("http://localhost:8000/bollywood")
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
+  }, []);
   const [isLinkCompoVisible] = useState(true);
  
   return (
@@ -17,7 +23,7 @@ function Bollywood() {
     <div className='normalpage'>
     <div className='section_one'>
     <div className='toptext'><span className='tophead'>Bolly</span><span>wood</span></div>
-      {DData.filter((item) => item.cate === 'Bollywood').map((data) => (
+      {DData.map((data) => (
         <>
         <Link key={data.id} to={`/article/${data.id}`}>
            <div className='Container'>
@@ -34,7 +40,7 @@ function Bollywood() {
       </div>
       <div className='section_two'>
       <div className='toptext'><span className='tophead'>Top </span><span>Post</span></div>
-      {DData.filter((item) => item.cate === 'Bollywood' && item.id === 14).map((data) => (
+      {DData.filter((item) =>  item.id === 14).map((data) => (
         <>
         <Link key={data.id} to={`/article/${data.id}`}>
            <div className='Container1'>
@@ -46,7 +52,7 @@ function Bollywood() {
            </Link>
         </>
       ))}
-      {DData.filter((item) => item.cate === 'Bollywood' && item.id % 4 === 0).map((data) => (
+      {DData.filter((item) =>  item.id % 4 === 0).map((data) => (
         <>
         <Link key={data.id} to={`/article/${data.id}`}>
            <div className='Container2'>
