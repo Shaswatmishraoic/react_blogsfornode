@@ -10,7 +10,7 @@ function Fitness() {
   // const [DData] = useContext(ContextData);
   const [DData, setData] = useState([]);
   useEffect(() => {
-    axios("http://localhost:8000/fitness")
+    axios("https://bloging-hcu6.onrender.com/")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);

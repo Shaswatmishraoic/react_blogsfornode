@@ -17,7 +17,7 @@ function ArticleDetails() {
   // const [data] = useContext(ContextData);
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios("http://localhost:8000/")
+    axios("https://bloging-hcu6.onrender.com/")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
